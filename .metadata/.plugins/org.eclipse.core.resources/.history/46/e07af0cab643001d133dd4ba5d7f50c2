@@ -1,0 +1,9 @@
+package com.assessment.ProjectCRUD.Repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.assessment.ProjectCRUD.Entity.Product;
+
+public interface ProductRepo extends JpaRepository<Product,Long>{
+
+}

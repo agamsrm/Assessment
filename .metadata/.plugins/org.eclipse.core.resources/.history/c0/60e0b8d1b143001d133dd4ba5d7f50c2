@@ -1,0 +1,24 @@
+package com.assessment.ProjectCRUD.Entity;
+
+import javax.persistence.*;
+
+import lombok.*;
+
+@Getter
+@Setter
+@Data
+@Entity
+@Table(name="ProductNew")
+public class Product {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	long id;
+	@Column
+	String product_name;
+	@Column
+	String product_description;
+	@Column
+	long price;
+
+}

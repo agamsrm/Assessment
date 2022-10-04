@@ -1,0 +1,5 @@
+package com.assessment.ProjectCRUD.Service;
+
+public interface ProductService {
+
+}
