@@ -1,0 +1,8 @@
+package com.assessment.ProjectCRUD.entity;
+
+import lombok.*;
+
+@Data
+public class JwtTokenRequest {
+
+}

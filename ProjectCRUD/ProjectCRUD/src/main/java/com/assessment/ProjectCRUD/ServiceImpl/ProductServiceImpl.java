@@ -1,5 +1,7 @@
 package com.assessment.ProjectCRUD.serviceimpl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -40,6 +42,12 @@ public class ProductServiceImpl implements ProductService {
 		// TODO Auto-generated method stub
 		productrepo.deleteById(id);
 		return "Data "+id+" Has Been Deleted Successfully";
+	}
+
+	@Override
+	public List<Product> allproduct() {
+		// TODO Auto-generated method stub
+		return productrepo.findAll();
 	}
 
 }

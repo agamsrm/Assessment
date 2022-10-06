@@ -1,5 +1,7 @@
 package com.assessment.ProjectCRUD.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -28,6 +30,12 @@ public class ProductControl {
 	Product getProduct(@PathVariable("id") long id) {
 		return productservice.getProduct(id);
 
+	}
+	
+	@GetMapping("/products")
+	public List<Product> allProduct()
+	{
+		return productservice.allproduct();
 	}
 
 	@DeleteMapping("/product/{id}")
