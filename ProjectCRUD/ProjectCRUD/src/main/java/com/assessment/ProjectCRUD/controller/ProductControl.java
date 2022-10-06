@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.assessment.ProjectCRUD.Entity.Product;
-import com.assessment.ProjectCRUD.Service.ProductService;
+import com.assessment.ProjectCRUD.entity.Product;
+import com.assessment.ProjectCRUD.service.ProductService;
 
 @RestController
 @RequestMapping("/product")
@@ -19,23 +19,23 @@ public class ProductControl {
 	@Autowired
 	ProductService productservice;
 
-	@PostMapping("/createproduct")
+	@PostMapping("/product")
 	public String addproduct(@RequestBody Product product) {
 		return productservice.createProduct(product);
 	}
 
-	@GetMapping("/retriveproduct/{id}")
+	@GetMapping("/product/{id}")
 	Product getProduct(@PathVariable("id") long id) {
 		return productservice.getProduct(id);
 
 	}
 
-	@DeleteMapping("/removeproduct/{id}")
+	@DeleteMapping("/product/{id}")
 	String DeleteProduct(@PathVariable("id") long id) {
 		return productservice.deleteProduct(id);
 	}
 
-	@PutMapping("/updateproduct")
+	@PutMapping("/product")
 	Product updateProduct(@RequestBody Product product) {
 		return productservice.updateProduct(product);
 	}

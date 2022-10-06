@@ -1,11 +1,11 @@
-package com.assessment.ProjectCRUD.ServiceImpl;
+package com.assessment.ProjectCRUD.serviceimpl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.assessment.ProjectCRUD.Entity.Product;
-import com.assessment.ProjectCRUD.Repository.ProductRepo;
-import com.assessment.ProjectCRUD.Service.ProductService;
+import com.assessment.ProjectCRUD.entity.Product;
+import com.assessment.ProjectCRUD.repository.ProductRepo;
+import com.assessment.ProjectCRUD.service.ProductService;
 
 @Service
 public class ProductServiceImpl implements ProductService {
@@ -17,7 +17,7 @@ public class ProductServiceImpl implements ProductService {
 		// TODO Auto-generated method stub
 
 		productrepo.save(product);
-		return "Product Added Successfully";
+		return "Product "+product.getId()+" Has Been Added Successfully";
 
 	}
 
@@ -39,7 +39,7 @@ public class ProductServiceImpl implements ProductService {
 	public String deleteProduct(long id) {
 		// TODO Auto-generated method stub
 		productrepo.deleteById(id);
-		return "Data Deleted Successfully";
+		return "Data "+id+" Has Been Deleted Successfully";
 	}
 
 }

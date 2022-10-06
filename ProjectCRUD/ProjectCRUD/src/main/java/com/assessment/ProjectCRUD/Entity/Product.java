@@ -1,4 +1,4 @@
-package com.assessment.ProjectCRUD.Entity;
+package com.assessment.ProjectCRUD.entity;
 
 import javax.persistence.*;
 

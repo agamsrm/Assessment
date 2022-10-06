@@ -2,3 +2,7 @@
 1664865900956	Delete element
 1664865920491	Delete element
 1664866013727	Delete element
+1665034151858	Rename package 'com.assessment.ProjectCRUD.Entity'
+1665034168833	Rename package 'com.assessment.ProjectCRUD.Repository'
+1665034179279	Rename package 'com.assessment.ProjectCRUD.Service'
+1665034194790	Rename package 'com.assessment.ProjectCRUD.ServiceImpl'

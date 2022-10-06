@@ -1,10 +1,7 @@
-package com.assessment.ProjectCRUD.Service;
+package com.assessment.ProjectCRUD.service;
 
-import org.springframework.stereotype.Service;
+import com.assessment.ProjectCRUD.entity.Product;
 
-import com.assessment.ProjectCRUD.Entity.Product;
-
-@Service
 public interface ProductService {
 
 	public String createProduct(Product product);
