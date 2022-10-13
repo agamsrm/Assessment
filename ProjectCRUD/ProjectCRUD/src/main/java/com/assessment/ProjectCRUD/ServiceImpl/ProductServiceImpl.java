@@ -15,11 +15,11 @@ public class ProductServiceImpl implements ProductService {
 	ProductRepo productrepo;
 
 	@Override
-	public String createProduct(Product product) {
+	public Product createProduct(Product product) {
 		// TODO Auto-generated method stub
 
 		productrepo.save(product);
-		return "Product "+product.getId()+" Has Been Added Successfully";
+		return product;
 
 	}
 
@@ -38,10 +38,10 @@ public class ProductServiceImpl implements ProductService {
 	}
 
 	@Override
-	public String deleteProduct(long id) {
+	public Long deleteProduct(long id) {
 		// TODO Auto-generated method stub
 		productrepo.deleteById(id);
-		return "Data "+id+" Has Been Deleted Successfully";
+		return id;
 	}
 
 	@Override

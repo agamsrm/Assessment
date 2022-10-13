@@ -8,6 +8,6 @@
 //@Configuration
 //@EnableWebSecurity
 //public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
-//	
+//      public static final String[] openuri= {"/product/product/**"};
 //
 //}

@@ -6,11 +6,11 @@ import com.assessment.ProjectCRUD.entity.Product;
 
 public interface ProductService {
 
-	public String createProduct(Product product);
+	public Product createProduct(Product product);
 
 	public Product updateProduct(Product product);
 
-	public String deleteProduct(long id);
+	public Long deleteProduct(long id);
 
 	public Product getProduct(long id);
 	

@@ -2,7 +2,10 @@ package com.assessment.ProjectCRUD.controller;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -20,9 +23,10 @@ import com.assessment.ProjectCRUD.service.ProductService;
 public class ProductControl {
 	@Autowired
 	ProductService productservice;
-
+    
+	@PreAuthorize("hasRole('ADMIN')")
 	@PostMapping("/product")
-	public String addproduct(@RequestBody Product product) {
+	public Product addproduct(@Valid @RequestBody Product product) {
 		return productservice.createProduct(product);
 	}
 
@@ -39,12 +43,12 @@ public class ProductControl {
 	}
 
 	@DeleteMapping("/product/{id}")
-	String DeleteProduct(@PathVariable("id") long id) {
+	Long DeleteProduct(@PathVariable("id") long id) {
 		return productservice.deleteProduct(id);
 	}
 
 	@PutMapping("/product")
-	Product updateProduct(@RequestBody Product product) {
+	Product updateProduct(@Valid @RequestBody Product product) {
 		return productservice.updateProduct(product);
 	}
 }
